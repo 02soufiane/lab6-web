@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Суфіан lab6</title>
+  <style>
+    body {
+      background-color: #111322;
+    }
+
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loading .b {
+      position: absolute;
+      padding: 10px;
+      border-radius: 50%;
+      background: #b0236e;
+      animation: animIn 1s ease-in-out 0s infinite;
+    }
+
+    .loading .bu:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .loading .b:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .loading .b:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .loading .b:nth-child(4) {
+      animation-delay: 0.45s;
+    }
+
+    @keyframes animIn {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class='loading'>
+    <div class='b'></div>
+    <div class='b'></div>
+    <div class='b'></div>
+    <div class='b'></div>
+  </div>
+</body>
+</html>
